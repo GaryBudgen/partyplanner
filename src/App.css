@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+.nav-bar{
+  align-items: left;
+  justify-content: left;
+  background-color: lightblue;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

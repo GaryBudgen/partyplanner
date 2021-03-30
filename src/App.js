@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {Party} from './Party'
+import {People} from './People'
+import {Drinks} from './Drinks'
+import {Navigation} from './Navigation'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <BrowserRouter>
+    <div className="container">
+     <h3 className="m-3 d-flex justify-content-center">
+       Party Planner
+     </h3>    
+    
+    <Navigation className="justify-content-left"/>
+    
+    <Switch>
+      <Route path="/" component={Party} exact />      
+      <Route path="/people" component={People} />
+      <Route path="/drinks" component={Drinks}/>      
+    </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 
